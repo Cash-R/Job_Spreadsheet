@@ -8,7 +8,7 @@
 plugins {
     id 'java'
     id 'application'
-    // id 'org.openjfx.javafxplugin' version '0.1.0'  // Simplifies JavaFX dependency setup
+    id 'org.openjfx.javafxplugin' version '0.1.0'  // Simplifies JavaFX dependency setup
 }
 
 jar {
@@ -25,24 +25,39 @@ application {
 // ---
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(platform("org.mongodb:mongodb-driver-bom:5.5.1"))
+    implementation 'org.mongodb:mongodb-driver-sync'
 }
 
 repositories {
-    flatDir {
-        dirs 'libs'
-    }
+    // flatDir {
+    //     dirs 'libs'
+    // }
+    mavenCentral()
 }
 
 /**
  * Can't get the run command to work with wsl. To run, execute "./gradlew run" in a powershell/cmd terminal
  */
-run {
-    jvmArgs = [
-        // "--module-path", "/mnt/c/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib",
-        "--module-path", "C:/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib",
-        "--add-modules", "javafx.controls,javafx.fxml",
-    ]
+// run {
+//     jvmArgs = [
+//         // "--module-path", "/mnt/c/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib",
+//         "--module-path", "C:/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib",
+//         "--add-modules", "javafx.controls,javafx.fxml",
+//         "--enable-native-access=javafx.graphics"
+//     ]
+// }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(24)
+    }
+}
+
+javafx {
+    version = "21"  // Latest stable version
+    modules = [ 'javafx.controls', 'javafx.fxml' ]  // Add more modules as needed
 }
 
 // ---
