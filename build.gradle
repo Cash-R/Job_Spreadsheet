@@ -14,12 +14,12 @@ plugins {
 jar {
     manifest {
         // attributes 'Main-Class': 'main.java.Test.EntryPoint'
-        attributes 'Main-Class': 'Test.App'
+        attributes 'Main-Class': 'com.jobspreadsheet.EntryPoint'
     }
 }
 
 application {
-    mainClass = 'Test.App'
+    mainClass = 'com.jobspreadsheet.EntryPoint'
 }
 
 // ---

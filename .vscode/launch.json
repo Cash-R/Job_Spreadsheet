@@ -14,26 +14,9 @@
             "type": "java",
             "name": "App",
             "request": "launch",
-            "mainClass": "main.java.Test.App",
-            // "mainClass": "Test.App",
-            "projectName": "Job_Spreadsheet_e01e1f69",
+            "mainClass": "com.jobspreadsheet.EntryPoint",
+            "projectName": "Job_Spreadsheet",
             "vmArgs": "--module-path C:/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib --add-modules javafx.controls,javafx.fxml"
         }
-        // {
-        //     "type": "java",
-        //     "name": "EntryPoint",
-        //     "request": "launch",
-        //     "mainClass": "Test.EntryPoint",
-        //     "projectName": "Job_Spreadsheet_e01e1f69",
-        //     "vmArgs": "--module-path C:/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        // },
-        // {
-        //     "type": "java",
-        //     "name": "EntryPoint(1)",
-        //     "request": "launch",
-        //     "mainClass": "Test.EntryPoint",
-        //     "projectName": "Job_Spreadsheet",
-        //     "vmArgs": "--module-path C:/Users/gaggg/Desktop/Projects/javafx-sdk-24.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        // }
     ]
 }
