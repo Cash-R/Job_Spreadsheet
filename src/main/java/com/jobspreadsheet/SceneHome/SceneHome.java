@@ -22,6 +22,10 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+// Custom Scenes
+
+import com.jobspreadsheet.SceneJobGrid.SceneJobGrid;
+
 
 /**
  * Home Screen Scene. Buttons/Branching paths to the rest of scenes
@@ -53,7 +57,8 @@ public class SceneHome extends Application {
         // primaryStage.setFullScreenExitHint("Press q");
         // primaryStage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
 
-        primaryStage.setScene(scene);
+        // primaryStage.setScene(scene);
+        primaryStage.setScene(SceneJobGrid.createScene());
         primaryStage.setTitle("JavaFX CSS Example");
         primaryStage.show();
     }

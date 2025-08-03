@@ -6,9 +6,11 @@
 # 	java -jar ./build/libs/Job_Spreadsheet.jar
 
 gbuild :
+	clear
 	./gradlew build
 gclear :
 	rm -rf ./build/
 rebuild : 
+	clear
 	rm -rf ./build/
 	./gradlew build
